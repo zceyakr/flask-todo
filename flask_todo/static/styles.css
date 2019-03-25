@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 2rem auto;
+  width: 80vw
+  color: #434343;
+}
+
+a {
+  border-bottom: 1px dotted blue;
+  color: blue;
+  text-decoration: none;
+}
+
+li.selected {
+  color: lightgreen;
+}
+
+label {
+  display: block;
+}
