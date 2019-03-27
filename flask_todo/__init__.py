@@ -2,6 +2,9 @@ from . import manager
 
 from flask import Flask, request, render_template
 
+import flask_todo.db
+
+
 man = manager.Manager()
 man.add_item('Is this going to work?')
 man.add_item('Finish Flask todo project')
