@@ -1,13 +1,13 @@
-from . import manager
+# from . import manager
 
 from flask import Flask, request, render_template
 
-import flask_todo.db
+# import flask_todo.db
 
 
-man = manager.Manager()
-man.add_item('Is this going to work?')
-man.add_item('Finish Flask todo project')
+# man = manager.Manager()
+# man.add_item('Is this going to work?')
+# man.add_item('Finish Flask todo project')
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
@@ -24,7 +24,7 @@ def create_app(test_config=None):
 
     @app.route('/')
     def index():
-        return render_template('index.html', items=man.item_list)
+        return render_template('index.html')
 
     @app.route('/create', methods=['GET', 'POST'])
     def create():
@@ -33,7 +33,6 @@ def create_app(test_config=None):
 
         elif request.method == 'POST':
             task = request.form['task']
-            man.add_item(task)
 
             return render_template('create.html', task=task)
 
